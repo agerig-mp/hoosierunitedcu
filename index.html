@@ -36,12 +36,15 @@
     <div class="utility-bar">
       <div class="container utility-inner d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-3">
         <div class="utility-left d-flex flex-wrap align-items-center gap-3">
-          <span><i class="bi bi-signpost-split" aria-hidden="true"></i> Routing #274073863</span>
+          <span>Routing #274073863</span>
           <a href="tel:3179234747"><i class="bi bi-telephone" aria-hidden="true"></i> 317-923-4747</a>
           <a href="mailto:credit.union@hoosierunitedcu.com"><i class="bi bi-envelope" aria-hidden="true"></i> Email Us</a>
           <a href="#locations"><i class="bi bi-geo-alt" aria-hidden="true"></i> Locations</a>
         </div>
         <div class="utility-actions d-flex flex-wrap align-items-center justify-content-md-end gap-2">
+          <a class="utility-icon-button pe-3" href="#" aria-label="Search">
+            <i class="bi bi-search" aria-hidden="true"></i>
+          </a>
           <div class="translate-control" aria-label="Translate this site">
             <i class="bi bi-translate" aria-hidden="true"></i>
             <span class="translate-label">Language</span>
@@ -62,8 +65,8 @@
         </button>
         <div class="collapse navbar-collapse" id="primaryNav">
           <ul class="navbar-nav ms-auto mb-2 mb-xl-0 align-items-xl-center">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item dropdown">
+            <li class="nav-item pe-3"><a class="nav-link active" href="#">Home</a></li>
+            <li class="nav-item dropdown pe-3">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Accounts</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Account Options</a></li>
@@ -71,7 +74,7 @@
                 <li><a class="dropdown-item" href="#">Share Savings</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item dropdown pe-3">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Loans</a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="#">Loan Rates</a></li>
@@ -80,8 +83,8 @@
                 <li><a class="dropdown-item" href="#">VISA Credit Card</a></li>
               </ul>
             </li>
-            <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-            <li class="nav-item"><a class="nav-link" href="#rates">Rates</a></li>
+            <li class="nav-item pe-3"><a class="nav-link" href="#">Services</a></li>
+            <li class="nav-item pe-3"><a class="nav-link" href="#rates">Rates</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Contact</a>
               <ul class="dropdown-menu">
@@ -172,10 +175,10 @@
     <section class="quick-actions" aria-label="Popular actions">
       <div class="container">
         <div class="quick-action-grid">
-          <a href="#"><i class="bi bi-person-plus" aria-hidden="true"></i><span>Join HUCU</span></a>
-          <a href="#"><i class="bi bi-credit-card-2-front" aria-hidden="true"></i><span>Apply for Loan</span></a>
-          <a href="#"><i class="bi bi-phone" aria-hidden="true"></i><span>Online Banking</span></a>
-          <a href="#locations"><i class="bi bi-geo-alt" aria-hidden="true"></i><span>Find a Branch</span></a>
+          <a href="#"><i class="bi bi-person-plus" aria-hidden="true"></i><span>Become a Member</span></a>
+          <a href="#"><i class="bi bi-credit-card-2-front" aria-hidden="true"></i><span>Apply for a Loan</span></a>
+          <a href="#"><i class="bi bi-cash-coin" aria-hidden="true"></i><span>Online Loan Payment</span></a>
+          <a href="#online-banking"><i class="bi bi-lock" aria-hidden="true"></i><span>Online Banking</span></a>
         </div>
       </div>
     </section>
@@ -428,18 +431,25 @@
       <div id="locations" class="footer-locations">
         <h2>Branch Locations</h2>
         <div class="location-grid">
-          <address><strong>Meridian Street</strong><span>1828 N Meridian Street, Suite 102<br>Indianapolis, IN 46202</span><em>M-F 10 am - 4:30 pm</em></address>
-          <address><strong>East Street</strong><span>225 South East Street, Suite 270<br>Indianapolis, IN 46202</span><em>Tues-Thurs 9 am - 3:30 pm</em></address>
-          <address><strong>45th Street</strong><span>2828 E 45th Street<br>Indianapolis, IN 46205</span><em>M-F 10 am - 4:30 pm</em></address>
+          <address>
+            <img class="branch-logo mb-3" src="assets/images/branches/ibew-local-481-logo.webp" alt="IBEW Local 481 logo">
+            <strong>Meridian Street</strong>
+            <span>1828 N Meridian Street, Suite 102<br>Indianapolis, IN 46202</span>
+            <em>M-F 10 am - 4:30 pm</em>
+          </address>
+          <address>
+            <img class="branch-logo mb-3" src="assets/images/branches/hucu-logo.webp" alt="Hoosier United Credit Union logo">
+            <strong>East Street</strong>
+            <span>225 South East Street, Suite 270<br>Indianapolis, IN 46202</span>
+            <em>Tues-Thurs 9 am - 3:30 pm</em>
+          </address>
+          <address>
+            <img class="branch-logo mb-3" src="assets/images/branches/smart-local-union-20-logo.webp" alt="SMART Local Union 20 logo">
+            <strong>45th Street</strong>
+            <span>2828 E 45th Street<br>Indianapolis, IN 46205</span>
+            <em>M-F 10 am - 4:30 pm</em>
+          </address>
         </div>
-      </div>
-
-      <div class="partner-strip" aria-label="Partner and membership organizations">
-        <span>Indiana Farm Bureau Insurance</span>
-        <span>IBEW Local 481</span>
-        <span>SMART Local 20</span>
-        <span>Cooperative Financial Association</span>
-        <span>Indiana Credit Union League</span>
       </div>
 
       <div class="footer-legal">
