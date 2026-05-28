@@ -1,26 +1,73 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-main">
-      <div class="footer-about">
+    <div class="footer-main row g-4 g-xl-5">
+      <div class="footer-about col-lg-12 col-xl-5">
+        <div>
         <img src="http://images.marketpath.com/e31e3d63-0d02-48d1-af71-1fd87256c338/image/0cda0d23-b3a3-49d6-8d5b-3603d9b1265f/hoosierunitedcreditunion-logo.png" alt="Hoosier United Credit Union">
-        <p>Hoosier United Credit Union provides quality banking, personal financial services, and competitive loan rates to members and owners.</p>
-        <div class="store-buttons">
-          <a href="#"><i class="bi bi-apple" aria-hidden="true"></i><span>Download on the<br><strong>App Store</strong></span></a>
-          <a href="#"><i class="bi bi-google-play" aria-hidden="true"></i><span>Get it on<br><strong>Google Play</strong></span></a>
+        <p class="mb-0">Hoosier United Credit Union provides quality banking, personal financial services, and competitive loan rates to members and owners across Indianapolis-area union and employer groups.</p>
+        <div class="store-buttons d-flex flex-wrap gap-2 mt-4" aria-label="Download mobile app">
+          <a class="text-decoration-none" href="#"><i class="bi bi-apple" aria-hidden="true"></i><span>Download on the<br><strong>App Store</strong></span></a>
+          <a class="text-decoration-none" href="#"><i class="bi bi-google-play" aria-hidden="true"></i><span>Get it on<br><strong>Google Play</strong></span></a>
         </div>
       </div>
-      <div class="footer-links">
-        <h2>Quick Links</h2>
-        <ul>
-          <li><a href="#"><i class="bi bi-lock" aria-hidden="true"></i> Online Banking</a></li>
-          <li><a href="#"><i class="bi bi-person-plus" aria-hidden="true"></i> Apply for Membership</a></li>
-          <li><a href="#"><i class="bi bi-calendar-event" aria-hidden="true"></i> Holiday Closing Schedule</a></li>
+      </div>
+      <div class="footer-links col-sm-6 col-xl-3">
+        <h2 class="h6 text-uppercase fw-bold mb-3">Quick Links</h2>
+        <ul class="list-unstyled d-grid gap-2 mb-0">
+          <li><a class="d-inline-flex align-items-center gap-2 text-decoration-none" href="#"><i class="bi bi-lock" aria-hidden="true"></i> Online Banking</a></li>
+          <li><a class="d-inline-flex align-items-center gap-2 text-decoration-none" href="#"><i class="bi bi-person-plus" aria-hidden="true"></i> Apply for Membership</a></li>
+          <li><a class="d-inline-flex align-items-center gap-2 text-decoration-none" href="#"><i class="bi bi-credit-card" aria-hidden="true"></i> Apply for a Loan</a></li>
+          <li><a class="d-inline-flex align-items-center gap-2 text-decoration-none" href="#rates"><i class="bi bi-percent" aria-hidden="true"></i> Rates</a></li>
+          <li><a class="d-inline-flex align-items-center gap-2 text-decoration-none" href="#"><i class="bi bi-calendar-event" aria-hidden="true"></i> Holiday Closing Schedule</a></li>
         </ul>
       </div>
-      <div class="footer-contact">
-        <h2>Contact</h2>
-        <p><strong>Phone:</strong> <a href="tel:3179234747">317-923-4747</a></p>
-        <p><strong>Email:</strong> <a href="mailto:credit.union@hoosierunitedcu.com">credit.union@hoosierunitedcu.com</a></p>
+      <div id="footer-contact" class="footer-contact col-sm-6 col-xl-4">
+        <h2 class="h6 text-uppercase fw-bold mb-3">Contact</h2>
+        <p class="mb-2"><strong>Phone:</strong> <a class="text-decoration-none" href="tel:3179234747">317-923-4747</a></p>
+        <p class="mb-2"><strong>Fax:</strong> 317-923-4830</p>
+        <p class="mb-0"><strong>Email:</strong> <a class="text-decoration-none" href="mailto:credit.union@hoosierunitedcu.com">credit.union@hoosierunitedcu.com</a></p>
+        <div class="footer-social d-flex gap-2 mt-3">
+          <a class="text-decoration-none" href="#" aria-label="Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+          <a class="text-decoration-none" href="#" aria-label="LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div id="locations" class="footer-locations">
+      <h2 class="h6 text-uppercase fw-bold mb-3">Branch Locations</h2>
+      <div class="location-grid row g-3">
+        <address class="col-md-6 col-xl-4 mb-0">
+          <div class="h-100 d-flex flex-column rounded-4 p-3 bg-white bg-opacity-10 border border-white border-opacity-10">
+          <img class="branch-logo mb-3" src="assets/images/branches/ibew-local-481-logo.webp" alt="IBEW Local 481 logo">
+          <strong>Meridian Street</strong>
+          <span>1828 N Meridian Street, Suite 102<br>Indianapolis, IN 46202</span>
+          <em>M-F 10 am - 4:30 pm</em>
+          </div>
+        </address>
+        <address class="col-md-6 col-xl-4 mb-0">
+          <div class="h-100 d-flex flex-column rounded-4 p-3 bg-white bg-opacity-10 border border-white border-opacity-10">
+          <img class="branch-logo mb-3" src="assets/images/branches/hucu-logo.webp" alt="Hoosier United Credit Union logo">
+          <strong>East Street</strong>
+          <span>225 South East Street, Suite 270<br>Indianapolis, IN 46202</span>
+          <em>Tues-Thurs 9 am - 3:30 pm</em>
+          </div>
+        </address>
+        <address class="col-md-6 col-xl-4 mb-0">
+          <div class="h-100 d-flex flex-column rounded-4 p-3 bg-white bg-opacity-10 border border-white border-opacity-10">
+          <img class="branch-logo mb-3" src="assets/images/branches/smart-local-union-20-logo.webp" alt="SMART Local Union 20 logo">
+          <strong>45th Street</strong>
+          <span>2828 E 45th Street<br>Indianapolis, IN 46205</span>
+          <em>M-F 10 am - 4:30 pm</em>
+          </div>
+        </address>
+      </div>
+    </div>
+
+    <div class="footer-legal d-flex flex-column flex-lg-row align-items-lg-center justify-content-lg-between gap-3">
+      <p class="mb-0">Federally insured by NCUA. Equal Housing Lender. Privacy Policy | Copyright 2026 Hoosier United Credit Union.</p>
+      <div class="legal-badges d-flex flex-wrap gap-2">
+        <span class="small">NCUA</span>
+        <span class="small"><i class="bi bi-house-door" aria-hidden="true"></i> Equal Housing Lender</span>
       </div>
     </div>
   </div>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hoosier United Credit Union | Home Mockup</title>
-  <meta name="description" content="Static Bootstrap homepage mockup for Hoosier United Credit Union.">
+  <title>Loans | Hoosier United Credit Union</title>
+  <meta name="description" content="Explore loan options from Hoosier United Credit Union.">
   <script>
     if (new URLSearchParams(window.location.search).get("sn") === "true") {
       document.documentElement.classList.add("sn-hide-notice");
@@ -17,10 +17,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
   <link href="assets/css/styles.css" rel="stylesheet">
 </head>
-<body class="bg-body">
+<body class="bg-body inside-page">
   <a class="skip-link" href="#main">Skip to main content</a>
-
-  <div data-include="modules/alert-bar.html"></div>
 
   <header class="site-header">
     <div data-include="modules/topbar.html"></div>
@@ -28,14 +26,8 @@
   </header>
 
   <main id="main">
-    <div data-include="modules/hero.html"></div>
-    <div data-include="modules/quick-actions.html"></div>
-    <div data-include="modules/services.html"></div>
-    <div data-include="modules/rates.html"></div>
-    <div data-include="modules/promotions.html"></div>
-    <div data-include="modules/why-hucu.html"></div>
-    <div data-include="modules/fraud.html"></div>
-    <div data-include="modules/testimonials.html"></div>
+    <div data-include="modules/page-banner-loans.html"></div>
+    <div data-include="modules/loans-content.html"></div>
     <div data-include="modules/cta.html"></div>
   </main>
 
@@ -75,36 +67,6 @@
       wrapper_selector: ".gtranslate_wrapper",
       flag_style: "3d"
     };
-  </script>
-  <script>
-    (function enablePromoRail() {
-      const rails = document.querySelectorAll("[data-promo-rail]");
-      rails.forEach((rail) => {
-        const track = rail.querySelector(".promo-card-grid");
-        const prev = rail.querySelector("[data-promo-prev]");
-        const next = rail.querySelector("[data-promo-next]");
-        if (!track || !prev || !next) {
-          return;
-        }
-
-        function getStep() {
-          const firstCard = track.querySelector(".promo-card");
-          if (!firstCard) {
-            return track.clientWidth;
-          }
-          const gap = Number.parseFloat(window.getComputedStyle(track).columnGap || window.getComputedStyle(track).gap || "0");
-          return firstCard.getBoundingClientRect().width + gap;
-        }
-
-        prev.addEventListener("click", function () {
-          track.scrollBy({ left: -getStep(), behavior: "smooth" });
-        });
-
-        next.addEventListener("click", function () {
-          track.scrollBy({ left: getStep(), behavior: "smooth" });
-        });
-      });
-    })();
   </script>
   <script>
     (function enableHotReload() {
