@@ -1204,6 +1204,10 @@ h3 {
   padding: .38rem .7rem;
 }
 
+.services-eyebrow {
+  font-family: var(--font-body);
+}
+
 .rates-intro h2 {
   color: var(--hucu-white);
   font-size: clamp(2.2rem, 4vw, 3.25rem);
