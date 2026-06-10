@@ -68,11 +68,59 @@
   <script>
     window.gtranslateSettings = {
       default_language: "en",
-      native_language_names: true,
       languages: ["en", "es"],
-      wrapper_selector: ".gtranslate_wrapper",
-      flag_style: "3d"
+      wrapper_selector: ".gtranslate_wrapper"
     };
+  </script>
+  <script>
+    (function initTranslateWidget() {
+      const labels = {
+        en: "EN",
+        es: "SP"
+      };
+      let widgetLoaded = false;
+
+      function syncLabels() {
+        document.querySelectorAll(".gtranslate_wrapper a[data-gt-lang]").forEach(function (link) {
+          const language = link.getAttribute("data-gt-lang");
+          if (labels[language]) {
+            link.textContent = labels[language];
+          }
+        });
+      }
+
+      function loadWidget() {
+        if (widgetLoaded || !document.querySelector(".gtranslate_wrapper")) {
+          return false;
+        }
+
+        widgetLoaded = true;
+
+        const script = document.createElement("script");
+        script.src = "https://cdn.gtranslate.net/widgets/latest/lc.js";
+        script.defer = true;
+        script.addEventListener("load", syncLabels);
+        document.body.appendChild(script);
+
+        return true;
+      }
+
+      const observer = new MutationObserver(function () {
+        syncLabels();
+        if (loadWidget()) {
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        syncLabels();
+        if (loadWidget()) {
+          observer.disconnect();
+        }
+      });
+    })();
   </script>
   <script>
     (function enableHotReload() {
@@ -118,7 +166,6 @@
       checkForChanges();
     })();
   </script>
-  <script src="https://cdn.gtranslate.net/widgets/latest/dropdown.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

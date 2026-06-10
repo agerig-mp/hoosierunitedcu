@@ -218,23 +218,6 @@ h3 {
   min-width: auto;
 }
 
-.translate-control select {
-  appearance: none;
-  background: transparent;
-  border: 0;
-  color: var(--hucu-white);
-  cursor: pointer;
-  font-size: .84rem;
-  font-weight: 700;
-  line-height: 1.1;
-  max-width: none;
-  min-width: auto;
-  outline: 0;
-  padding: 0 .85rem 0 0;
-  white-space: nowrap;
-  width: auto;
-}
-
 .inside-page {
   background:
     radial-gradient(circle at top center, rgba(223, 236, 246, .5), transparent 28%),
@@ -314,23 +297,32 @@ h3 {
 }
 
 .translate-control .gtranslate_wrapper {
+  display: inline-flex;
+  gap: 0;
   position: relative;
 }
 
-.translate-control .gtranslate_wrapper::after {
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  border-top: 5px solid rgba(255, 255, 255, .78);
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  right: 1px;
-  top: 50%;
-  transform: translateY(-35%);
+.translate-control .gtranslate_wrapper a.glink {
+  color: rgba(255, 255, 255, .72);
+  display: inline-flex;
+  font-size: .84rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  line-height: 1;
+  padding: 0;
+  text-transform: uppercase;
 }
 
-.translate-control select option {
-  color: var(--hucu-ink);
+.translate-control .gtranslate_wrapper a.glink + a.glink::before {
+  color: rgba(255, 255, 255, .58);
+  content: "/";
+  margin: 0 .35rem;
+}
+
+.translate-control .gtranslate_wrapper a.glink:hover,
+.translate-control .gtranslate_wrapper a.glink:focus,
+.translate-control .gtranslate_wrapper a.glink.gt-current-lang {
+  color: var(--hucu-white);
 }
 
 .navbar {
@@ -2279,11 +2271,6 @@ h3 {
   .translate-control .gtranslate_wrapper {
     flex: 0 0 auto;
     min-width: auto;
-  }
-
-  .translate-control select {
-    max-width: none;
-    width: auto;
   }
 
   .navbar-brand img {
