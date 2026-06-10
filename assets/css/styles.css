@@ -1921,6 +1921,64 @@ h3 {
   margin-top: .6rem;
 }
 
+.footer-atm-callout {
+  align-items: center;
+  background: rgba(255, 255, 255, .06);
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-radius: 22px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .04);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem 2rem;
+  justify-content: space-between;
+  margin-top: 1.4rem;
+  padding: 1.25rem 1.4rem;
+}
+
+.footer-atm-copy {
+  flex: 1 1 320px;
+  max-width: 44rem;
+}
+
+.footer-atm-copy h3 {
+  color: var(--hucu-white);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 800;
+  margin: 0 0 .35rem;
+}
+
+.footer-atm-copy p {
+  color: rgba(255, 255, 255, .82);
+  margin: 0;
+}
+
+.footer-atm-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+}
+
+.footer-atm-links a {
+  align-items: center;
+  background: rgba(8, 21, 34, .72);
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 999px;
+  color: var(--hucu-white);
+  display: inline-flex;
+  font-weight: 800;
+  min-height: 2.9rem;
+  padding: .55rem 1rem;
+  transition: border-color .2s ease, transform .2s ease, color .2s ease;
+}
+
+.footer-atm-links a:hover,
+.footer-atm-links a:focus {
+  border-color: rgba(255, 255, 255, .3);
+  color: var(--hucu-gold);
+  transform: translateY(-1px);
+}
+
 .footer-legal {
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, .14);
