@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Hoosier United Credit Union</title>
+  <meta name="description" content="Contact Hoosier United Credit Union and quickly find the right branch location, phone support, and member service details.">
+  <script>
+    if (new URLSearchParams(window.location.search).get("sn") === "true") {
+      document.documentElement.classList.add("sn-hide-notice");
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="assets/css/styles.css" rel="stylesheet">
+</head>
+<body class="bg-body inside-page contact-page">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div data-include="modules/topbar.html"></div>
+    <div data-include="modules/navigation.html"></div>
+  </header>
+
+  <main id="main">
+    <div data-include="modules/page-banner-contact.html"></div>
+    <div data-include="modules/contact-directory.html"></div>
+  </main>
+
+  <div data-include="modules/footer.html"></div>
+
+  <script>
+    (function loadModules() {
+      const slots = Array.from(document.querySelectorAll("[data-include]"));
+      if (!slots.length) {
+        document.documentElement.classList.add("modules-ready");
+        return;
+      }
+
+      Promise.all(
+        slots.map(async function (slot) {
+          const path = slot.getAttribute("data-include");
+          const response = await fetch(path, { cache: "no-store" });
+          if (!response.ok) {
+            throw new Error("Failed to load module: " + path);
+          }
+          slot.outerHTML = await response.text();
+        })
+      )
+        .then(function () {
+          document.documentElement.classList.add("modules-ready");
+        })
+        .catch(function (error) {
+          console.error(error);
+        });
+    })();
+  </script>
+  <script>
+    window.gtranslateSettings = {
+      default_language: "en",
+      languages: ["en", "es"],
+      wrapper_selector: ".gtranslate_wrapper"
+    };
+  </script>
+  <script>
+    (function initTranslateWidget() {
+      const labels = {
+        en: "EN",
+        es: "SP"
+      };
+      let widgetLoaded = false;
+
+      function syncLabels() {
+        document.querySelectorAll(".gtranslate_wrapper a[data-gt-lang]").forEach(function (link) {
+          const language = link.getAttribute("data-gt-lang");
+          if (labels[language]) {
+            link.textContent = labels[language];
+          }
+        });
+      }
+
+      function loadWidget() {
+        if (widgetLoaded || !document.querySelector(".gtranslate_wrapper")) {
+          return false;
+        }
+
+        widgetLoaded = true;
+
+        const script = document.createElement("script");
+        script.src = "https://cdn.gtranslate.net/widgets/latest/lc.js";
+        script.defer = true;
+        script.addEventListener("load", syncLabels);
+        document.body.appendChild(script);
+
+        return true;
+      }
+
+      const observer = new MutationObserver(function () {
+        syncLabels();
+        if (loadWidget()) {
+          observer.disconnect();
+        }
+      });
+
+      observer.observe(document.documentElement, { childList: true, subtree: true });
+
+      document.addEventListener("DOMContentLoaded", function () {
+        syncLabels();
+        if (loadWidget()) {
+          observer.disconnect();
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function enableHotReload() {
+      const targets = [
+        window.location.pathname || "/",
+        "assets/css/styles.css"
+      ];
+      const seen = new Map();
+
+      async function getContents(url) {
+        try {
+          const separator = url.includes("?") ? "&" : "?";
+          const response = await fetch(`${url}${separator}hotreload=${Date.now()}`, {
+            cache: "no-store"
+          });
+          if (!response.ok) {
+            return null;
+          }
+          return await response.text();
+        } catch (error) {
+          return null;
+        }
+      }
+
+      async function checkForChanges() {
+        for (const url of targets) {
+          const contents = await getContents(url);
+          if (contents === null) {
+            continue;
+          }
+          if (!seen.has(url)) {
+            seen.set(url, contents);
+            continue;
+          }
+          if (seen.get(url) !== contents) {
+            window.location.reload();
+            return;
+          }
+        }
+      }
+
+      window.setInterval(checkForChanges, 1000);
+      checkForChanges();
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
